@@ -21,11 +21,17 @@ body {
   overflow: hidden;
   width: 280px;
   box-shadow: 0 6px 12px rgba(0,0,0,0.5);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .movie-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 12px 32px 0 rgba(229,9,20,0.25), 0 6px 24px rgba(0,0,0,0.7);
+}
+
+.movie-card:hover img {
+  filter: brightness(1.08) contrast(1.08);
+  transition: filter 0.3s;
 }
 
 .movie-card img {
@@ -129,13 +135,15 @@ body {
   border-radius: 4px;
   cursor: pointer;
   letter-spacing: 1px;
-  transition: background 0.2s, color 0.2s, transform 0.1s;
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.2s;
 }
 
-.nav-btn:hover {
+.nav-btn:hover, .nav-btn:focus-visible {
   background: #e50914;
   color: #fff;
-  transform: scale(1.08);
+  transform: translateY(-3px) scale(1.10);
+  box-shadow: 0 4px 16px 0 rgba(229,9,20,0.25), 0 2px 8px rgba(0,0,0,0.25);
+  outline: none;
 }
 
 @media (max-width: 700px) {
