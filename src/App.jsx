@@ -3,8 +3,13 @@ import {movieCards} from './moviecard'
 import './App.css'
 
 function App() {
-  
-  const watch_url = "https://www.netflix.com";  
+  const [search,setSearch] = useState("");
+  const watch_url = "https://www.netflix.com"; 
+
+const filteredMovies = movieCards.filter(movie =>
+    movie.title.toLowerCase().includes(search.toLowerCase()) ||
+    movie.genre.some(genre => genre.toLowerCase().includes(search.toLowerCase()))
+  );
 
   return (
     <>
@@ -16,11 +21,17 @@ function App() {
             <button className="nav-btn">Series</button>
             <button className="nav-btn">Movies</button>
             <button className="nav-btn">My List</button>
+            <input 
+              type="text" 
+              placeholder="Search..." 
+              className="search-input"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}/>
           </div>
         </div>
       </nav>
       <div className="app-container">
-        {movieCards.map((movie) => (
+        {filteredMovies.map((movie) => (
           <div key={movie.id} className="movie-card">
             <img src={movie.image} alt={movie.title} />
             <h3>{movie.title}</h3>
