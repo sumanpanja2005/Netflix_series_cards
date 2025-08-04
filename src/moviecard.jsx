@@ -120,4 +120,35 @@ export const movieCards = [
       year: 2016,
       ageLimit: "16+",
     },
+    {
+      id: 13,
+      title: "Chernobyl",
+      genre: ["Drama", "History", "Thriller"],
+      description: "In April 1986, an explosion at the Chernobyl nuclear power plant in the USSR becomes one of the world's worst man-made catastrophes.",
+      image: "https://image.tmdb.org/t/p/w500/hlLXt2tOPT6RRnjiUmoxyG1LTFi.jpg",
+      rating: 9.4,
+      year: 2019,
+      ageLimit: "18+",
+    },
+    {
+      id: 14,
+      title: "Black Mirror",
+      genre: ["Sci-Fi", "Drama", "Thriller"],
+      description: "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide.",
+      image: "https://www.whats-on-netflix.com/wp-content/uploads/2025/04/will-black-mirror-be-back-for-season-8-netflix-768x432.jpg",
+      rating: 8.8,
+      year: 2011,
+      ageLimit: "18+",
+    },
+    {
+      id: 15,
+      title: "The Crown",
+      genre: ["Drama", "History", "Biography"],
+      description: "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the 20th century.",
+      image: "https://images.immediate.co.uk/production/volatile/sites/7/2018/01/TheCrown_201_Unit_01348_R202-5625d50.jpg?quality=90&fit=622,414",
+      rating: 8.6,
+      year: 2016,
+      ageLimit: "16+",
+    }
+    
   ];
